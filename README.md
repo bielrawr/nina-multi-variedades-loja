@@ -6,6 +6,10 @@ Site institucional da **Nina MULTI Variedades**, loja localizada em Itabira, MG,
 
 O projeto apresenta a loja, seus principais segmentos de atuacao, informacoes de contato, endereco, horario de funcionamento e links para redes sociais. A proposta e oferecer uma presenca online simples, clara e responsiva, facilitando que clientes conhecam a loja e encontrem rapidamente os canais de atendimento.
 
+## Identidade Visual
+
+A tipografia, a tabela de cores e o logo utilizados no site fazem parte da identidade visual da cliente. A loja ja possuia essas artes e referencias visuais em maos, e o desenvolvimento respeitou esse material para manter consistencia com a marca Nina MULTI Variedades.
+
 ## Ramo e Atividades da Loja
 
 A Nina MULTI Variedades atua no comercio varejista com uma selecao ampla de produtos e servicos, incluindo:
