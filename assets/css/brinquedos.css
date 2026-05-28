@@ -1,0 +1,7 @@
+@import url("./category.css");
+
+:root {
+    --category-accent: #e90284;
+    --category-image: url("/assets/img/kids-playing.jpg");
+    --category-position: center;
+}

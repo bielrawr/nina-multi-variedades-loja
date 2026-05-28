@@ -1,0 +1,7 @@
+@import url("./category.css");
+
+:root {
+    --category-accent: #f5a721;
+    --category-image: url("/assets/img/papelaria.jpg");
+    --category-position: center;
+}

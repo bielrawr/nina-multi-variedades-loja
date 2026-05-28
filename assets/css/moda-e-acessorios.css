@@ -1,0 +1,7 @@
+@import url("./category.css");
+
+:root {
+    --category-accent: #90c83f;
+    --category-image: url("/assets/img/moda-e-acessorios.jpg");
+    --category-position: center right;
+}

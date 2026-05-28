@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nina MULTI Variedades</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/slide.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link href="/assets/img/icon.png" rel="icon">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a class="header-logo" href="/index.html" aria-label="Página inicial da Nina Multi Variedades">
+                <img src="/assets/img/square.png" alt="Logo Nina" class="logo-square">
+                <img src="/assets/img/multivariedades.png" alt="Nina Multi Variedades" class="multivariedades">
+            </a>
+            <div class="header-menu">
+                <nav class="nav-bar" aria-label="Menu principal">
+                    <ul class="nav-links-desktop">
+                        <li><a href="/index.html">Início</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                    </ul>
+                    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+                        <button class="close" id="closeButton" type="button" aria-label="Fechar menu">
+                            <i class="fas fa-times" aria-hidden="true"></i>
+                        </button>
+                        <ul class="nav-links-mobile">
+                            <li><a href="/index.html">Início</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                        </ul>
+                    </div>
+                    <button class="hamburger" id="hamburgerButton" type="button" aria-label="Abrir menu" aria-controls="mobileMenu" aria-expanded="false">
+                        <i class="fa-sharp fa-solid fa-bars" aria-hidden="true"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="slider" aria-label="Categorias da loja">
+            <div class="slider-content">
+                <input type="radio" name="radio-btn" id="radio-1">
+                <input type="radio" name="radio-btn" id="radio-2">
+                <input type="radio" name="radio-btn" id="radio-3">
+                <input type="radio" name="radio-btn" id="radio-4">
+
+                <div class="slide-box primeiro-slide">
+                    <a href="/eletronicos.html">
+                        <img class="img-desktop" src="/assets/img/eletronicos-slider.png" alt="Eletrônicos">
+                    </a>
+                </div>
+
+                <div class="slide-box segundo-slide">
+                    <a href="/brinquedos.html">
+                        <img class="img-desktop" src="/assets/img/brinquedos-slider.png" alt="Brinquedos">
+                    </a>
+                </div>
+
+                <div class="slide-box terceiro-slide">
+                    <a href="/moda-e-acessorios.html">
+                        <img class="img-desktop" src="/assets/img/moda-slider.png" alt="Moda e acessórios">
+                    </a>
+                </div>
+
+                <div class="slide-box quarto-slide">
+                    <a href="/papelaria.html">
+                        <img class="img-desktop" src="/assets/img/papelaria-slider.png" alt="Papelaria">
+                    </a>
+                </div>
+
+                <div class="nav-auto" aria-hidden="true">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+
+                <div class="nav-manual" aria-label="Navegação do slider">
+                    <label for="radio-1" class="manual-btn" aria-label="Slide de eletrônicos"></label>
+                    <label for="radio-2" class="manual-btn" aria-label="Slide de brinquedos"></label>
+                    <label for="radio-3" class="manual-btn" aria-label="Slide de moda e acessórios"></label>
+                    <label for="radio-4" class="manual-btn" aria-label="Slide de papelaria"></label>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-section1" id="sobre">
+            <article class="intro">
+                <div class="intro-content">
+                    <div class="intro-copy">
+                        <h1>Sejam bem-vindos à Nina MULTI VARIEDADES</h1>
+                        <h3>
+                            É um prazer ter você conosco. Oferecemos uma vasta gama de produtos e serviços para atender todas as suas necessidades: brinquedos, eletrônicos, moda, acessórios, papelaria e assistência técnica. Nossa missão é proporcionar uma experiência de compra completa, clara e satisfatória.
+                        </h3>
+                    </div>
+
+                    <div class="info-column">
+                        <div class="store-info">
+                            <h4>Endereço</h4>
+                            <p>Rua Oito, nº 200<br>Santa Ruth<br>Itabira, MG</p>
+                        </div>
+                        <div class="store-info">
+                            <h4>Funcionamento</h4>
+                            <p>Segunda a sábado<br>Das 9h às 19h<br>Exceto feriados</p>
+                        </div>
+                        <div class="map-container">
+                            <iframe class="mapa" title="Mapa da Nina Multi Variedades" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.213645558774!2d-43.23336962500698!3d-19.66088858166788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa5a13851c78d87%3A0xf451ae4e2e9a5c82!2sR.%20Oito%2C%20200%20-%20Santa%20Ruth%2C%20Itabira%20-%20MG%2C%2035901-188!5e0!3m2!1spt-BR!2sbr!4v1719329468375!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="container-footer">
+            <div class="social-links">
+                <ul>
+                    <li id="copy">
+                        <p>&copy; 2024 Nina MULTI VARIEDADES<br>Todos os direitos reservados.</p>
+                    </li>
+                    <li class="designed">
+                        <p>Desenvolvido<br>por <a href="#">GabrielR</a></p>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/5531971799617" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/img/whatsapp1.png" alt="">Whatsapp
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/nina_multi_variedades/" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/img/instagram.png" alt="">Instagram
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/slide.js"></script>
+    <script src="/assets/js/mobile-nav.js"></script>
+</body>
+</html>

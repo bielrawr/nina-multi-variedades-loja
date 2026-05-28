@@ -1,0 +1,460 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --brand: #054340;
+    --brand-soft: #0a5a55;
+    --accent: #e90284;
+    --text: #173331;
+    --muted: #5f716f;
+    --surface: #ffffff;
+    --surface-soft: #f4f7f6;
+    --shadow: 0 18px 48px rgba(5, 67, 64, 0.16);
+    --radius: 8px;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+    background: var(--surface-soft);
+    color: var(--text);
+    font-family: "Open Sans", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    box-shadow: 0 2px 20px rgba(5, 67, 64, 0.08);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(1120px, calc(100% - 32px));
+    min-height: 86px;
+    margin: 0 auto;
+    gap: 36px;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    gap: 22px;
+    padding: 10px 0;
+}
+
+.logo-square {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
+.multivariedades {
+    width: min(260px, 48vw);
+    height: auto;
+    object-fit: contain;
+}
+
+.nav-bar,
+.nav-links-desktop,
+.nav-links-mobile {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links-desktop,
+.nav-links-mobile {
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-bar a {
+    color: var(--brand);
+    font-family: "ADLaM Display", system-ui, sans-serif;
+    font-size: 0.95rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-bar a:hover,
+.nav-bar a:focus-visible {
+    color: var(--accent);
+    opacity: 0.9;
+}
+
+.hamburger,
+.close {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: var(--brand);
+    cursor: pointer;
+    font-size: 1.45rem;
+    line-height: 1;
+}
+
+.hamburger i,
+.close i {
+    display: none;
+}
+
+.hamburger::before {
+    content: "\2630";
+}
+
+.close::before {
+    content: "\00d7";
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.intro {
+    position: relative;
+    isolation: isolate;
+    min-height: 760px;
+    padding: clamp(40px, 7vw, 88px) 16px;
+    background-image: linear-gradient(rgba(5, 29, 28, 0.6), rgba(5, 29, 28, 0.76)), url("/assets/img/arte-visita.png");
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    width: min(1040px, 100%);
+    margin: 0 auto;
+    gap: 24px;
+}
+
+.intro-copy,
+.store-info,
+.map-container {
+    border-radius: var(--radius);
+    background: linear-gradient(145deg, rgba(5, 67, 64, 0.82), rgba(10, 18, 18, 0.72));
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(8px);
+}
+
+.intro-copy {
+    width: 100%;
+    padding: clamp(24px, 4vw, 40px);
+    border-left: 5px solid var(--accent);
+    text-align: center;
+}
+
+.intro h1 {
+    max-width: 840px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-family: "ADLaM Display", system-ui, sans-serif;
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    line-height: 1.15;
+}
+
+.intro h3 {
+    max-width: 760px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 22px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    font-weight: 600;
+}
+
+.info-column {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.store-info {
+    padding: 22px;
+    border-left: 4px solid rgba(233, 2, 132, 0.72);
+    text-align: center;
+}
+
+.store-info h4 {
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-family: "ADLaM Display", system-ui, sans-serif;
+    font-size: 1.05rem;
+}
+
+.store-info p {
+    color: rgba(255, 255, 255, 0.84);
+}
+
+.map-container {
+    grid-column: 1 / -1;
+    overflow: hidden;
+    min-height: 340px;
+}
+
+.mapa {
+    display: block;
+    width: 100%;
+    min-height: 340px;
+    border: 0;
+}
+
+footer {
+    width: 100%;
+    background: var(--brand);
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.container-footer {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 24px 0;
+}
+
+.social-links ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 28px;
+}
+
+.social-links li {
+    min-width: 0;
+}
+
+#copy {
+    flex: 1 1 auto;
+    margin-right: 0;
+    text-align: left;
+}
+
+.designed {
+    flex: 0 0 auto;
+    text-align: left;
+}
+
+#copy p,
+.designed p {
+    font-size: 0.86rem;
+}
+
+.designed a {
+    color: #d7e7e5;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    font-size: 0.86rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+    text-decoration: underline;
+}
+
+.social-links a img {
+    width: 30px;
+    height: 30px;
+    border-radius: 20%;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: #b2b2b2;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--brand);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6c6c6c;
+}
+
+@media (max-width: 900px) {
+    .header-container {
+        min-height: 58px;
+        gap: 16px;
+    }
+
+    .header-logo {
+        gap: 10px;
+        padding: 4px 0;
+    }
+
+    .logo-square {
+        width: 38px;
+        height: 38px;
+    }
+
+    .multivariedades {
+        width: min(165px, 48vw);
+    }
+
+    .nav-links-desktop {
+        display: none;
+    }
+
+    .hamburger,
+    .close {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        font-size: 1.25rem;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        inset: 0 0 0 auto;
+        display: flex;
+        width: min(320px, 82vw);
+        padding: 18px 24px 32px;
+        background: #ffffff;
+        box-shadow: -18px 0 40px rgba(0, 0, 0, 0.18);
+        transform: translateX(100%);
+        transition: transform 0.25s ease;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .mobile-menu.flex {
+        transform: translateX(0);
+    }
+
+    .nav-links-mobile {
+        width: 100%;
+        padding-top: 32px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nav-links-mobile li {
+        border-bottom: 1px solid rgba(5, 67, 64, 0.12);
+    }
+
+    .nav-links-mobile a {
+        display: block;
+        padding: 18px 0;
+        font-size: 1rem;
+    }
+
+    .intro-content {
+        grid-template-columns: 1fr;
+    }
+
+    .info-column {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .header-container,
+    .container-footer {
+        width: min(100% - 24px, 1120px);
+    }
+
+    .intro {
+        min-height: auto;
+        padding: 32px 12px;
+    }
+
+    .intro-copy,
+    .store-info {
+        padding: 20px;
+    }
+
+    .mapa,
+    .map-container {
+        min-height: 260px;
+    }
+
+    .social-links ul {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: center;
+        gap: 16px 18px;
+        text-align: center;
+    }
+
+    #copy,
+    .designed {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    #copy {
+        order: 1;
+    }
+
+    .social-links li:nth-child(3),
+    .social-links li:nth-child(4) {
+        order: 2;
+    }
+
+    .designed {
+        order: 3;
+    }
+
+    .social-links a {
+        justify-content: center;
+        font-size: 0.78rem;
+    }
+
+    .social-links a img {
+        width: 24px;
+        height: 24px;
+    }
+}
