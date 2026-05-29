@@ -6,13 +6,9 @@
 
 :root {
     --brand: #054340;
-    --brand-soft: #0a5a55;
     --accent: #e90284;
     --text: #173331;
-    --muted: #5f716f;
-    --surface: #ffffff;
     --surface-soft: #f4f7f6;
-    --shadow: 0 18px 48px rgba(5, 67, 64, 0.16);
     --radius: 8px;
 }
 
@@ -145,11 +141,6 @@ header.is-scrolled .multivariedades {
     line-height: 1;
 }
 
-.hamburger i,
-.close i {
-    display: none;
-}
-
 .hamburger::before {
     content: "\2630";
 }
@@ -228,6 +219,10 @@ header.is-scrolled .multivariedades {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.contact-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .store-info {
     padding: 22px;
     border-left: 4px solid rgba(233, 2, 132, 0.72);
@@ -239,10 +234,69 @@ header.is-scrolled .multivariedades {
     color: #ffffff;
     font-family: "ADLaM Display", system-ui, sans-serif;
     font-size: 1.05rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 
 .store-info p {
     color: rgba(255, 255, 255, 0.84);
+}
+
+.contact-card {
+    display: flex;
+    min-height: 260px;
+    color: #ffffff;
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover,
+.contact-card:focus-visible {
+    border-color: rgba(233, 2, 132, 0.78);
+    box-shadow: 0 24px 54px rgba(0, 0, 0, 0.36);
+    transform: translateY(-4px);
+}
+
+.contact-card-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.contact-card-letter {
+    display: inline-flex;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    font-family: "ADLaM Display", system-ui, sans-serif;
+    font-size: 1.6rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-action {
+    display: inline-flex;
+    margin-top: auto;
+    padding: 8px 14px;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-card:hover .contact-action,
+.contact-card:focus-visible .contact-action {
+    background: rgba(10, 90, 85, 0.84);
+    border-color: rgba(255, 255, 255, 0.38);
 }
 
 .map-container {
@@ -449,6 +503,11 @@ footer {
     }
 
     .info-column {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid,
+    .contact-grid {
         grid-template-columns: 1fr;
     }
 

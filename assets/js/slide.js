@@ -1,22 +1,35 @@
 const sliderRadios = document.querySelectorAll('input[name="radio-btn"]');
 let currentSlide = 1;
+let sliderTimer;
+const sliderDelay = 5000;
+
+function showSlide(slideNumber) {
+    currentSlide = slideNumber;
+    const selectedSlide = document.getElementById(`radio-${currentSlide}`);
+
+    if (selectedSlide) {
+        selectedSlide.checked = true;
+    }
+}
+
+function nextSlide() {
+    const nextSlideNumber = currentSlide >= sliderRadios.length ? 1 : currentSlide + 1;
+    showSlide(nextSlideNumber);
+}
+
+function restartSliderTimer() {
+    clearInterval(sliderTimer);
+    sliderTimer = setInterval(nextSlide, sliderDelay);
+}
 
 if (sliderRadios.length > 0) {
-    const firstSlide = document.getElementById("radio-1");
-    if (firstSlide) {
-        firstSlide.checked = true;
-    }
+    showSlide(1);
+    restartSliderTimer();
 
-    setInterval(() => {
-        currentSlide += 1;
-
-        if (currentSlide > sliderRadios.length) {
-            currentSlide = 1;
-        }
-
-        const nextSlide = document.getElementById(`radio-${currentSlide}`);
-        if (nextSlide) {
-            nextSlide.checked = true;
-        }
-    }, 5000);
+    sliderRadios.forEach((radio, index) => {
+        radio.addEventListener("click", () => {
+            showSlide(index + 1);
+            restartSliderTimer();
+        });
+    });
 }

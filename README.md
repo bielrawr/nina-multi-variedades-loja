@@ -26,6 +26,7 @@ A Nina MULTI Variedades atua no comercio varejista com uma selecao ampla de prod
 
 - Pagina inicial com slider de categorias;
 - Pagina Sobre dedicada com apresentacao institucional da loja;
+- Pagina Contato dedicada com links diretos para atendimento;
 - Paginas especificas para Eletronicos, Brinquedos, Moda e Acessorios, e Papelaria;
 - Layout responsivo para desktop, tablet e celular;
 - Menu mobile com abertura e fechamento acessiveis;
@@ -41,7 +42,6 @@ A Nina MULTI Variedades atua no comercio varejista com uma selecao ampla de prod
 - **CSS3** para layout, responsividade, animacoes e identidade visual;
 - **JavaScript** para controle do menu mobile e slider;
 - **Google Fonts** para tipografia;
-- **Font Awesome** como apoio para icones;
 - **Google Maps Embed** para exibicao do endereco da loja.
 
 ## Estrutura do Projeto
@@ -53,6 +53,7 @@ A Nina MULTI Variedades atua no comercio varejista com uma selecao ampla de prod
 |   +-- img
 |   +-- js
 +-- brinquedos.html
++-- contato.html
 +-- eletronicos.html
 +-- index.html
 +-- moda-e-acessorios.html
