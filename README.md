@@ -25,6 +25,7 @@ A Nina MULTI Variedades atua no comercio varejista com uma selecao ampla de prod
 ## Funcionalidades
 
 - Pagina inicial com slider de categorias;
+- Pagina Sobre dedicada com apresentacao institucional da loja;
 - Paginas especificas para Eletronicos, Brinquedos, Moda e Acessorios, e Papelaria;
 - Layout responsivo para desktop, tablet e celular;
 - Menu mobile com abertura e fechamento acessiveis;
@@ -56,6 +57,7 @@ A Nina MULTI Variedades atua no comercio varejista com uma selecao ampla de prod
 +-- index.html
 +-- moda-e-acessorios.html
 +-- papelaria.html
++-- sobre.html
 +-- README.md
 ```
 

@@ -45,6 +45,7 @@ header {
     z-index: 50;
     background: #ffffff;
     box-shadow: 0 2px 20px rgba(5, 67, 64, 0.08);
+    transition: box-shadow 0.25s ease;
 }
 
 .header-container {
@@ -55,6 +56,7 @@ header {
     min-height: 86px;
     margin: 0 auto;
     gap: 36px;
+    transition: min-height 0.25s ease, gap 0.25s ease;
 }
 
 .header-logo {
@@ -63,6 +65,7 @@ header {
     min-width: 0;
     gap: 22px;
     padding: 10px 0;
+    transition: gap 0.25s ease, padding 0.25s ease;
 }
 
 .logo-square {
@@ -70,12 +73,37 @@ header {
     height: 56px;
     object-fit: contain;
     flex: 0 0 auto;
+    transition: width 0.25s ease, height 0.25s ease;
 }
 
 .multivariedades {
     width: min(260px, 48vw);
     height: auto;
     object-fit: contain;
+    transition: width 0.25s ease;
+}
+
+header.is-scrolled {
+    box-shadow: 0 4px 22px rgba(5, 67, 64, 0.14);
+}
+
+header.is-scrolled .header-container {
+    min-height: 60px;
+    gap: 22px;
+}
+
+header.is-scrolled .header-logo {
+    gap: 14px;
+    padding: 4px 0;
+}
+
+header.is-scrolled .logo-square {
+    width: 39px;
+    height: 39px;
+}
+
+header.is-scrolled .multivariedades {
+    width: min(182px, 40vw);
 }
 
 .nav-bar,
@@ -194,6 +222,10 @@ header {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
+}
+
+.about-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .store-info {
@@ -348,6 +380,32 @@ footer {
         width: 36px;
         height: 36px;
         font-size: 1.25rem;
+    }
+
+    header.is-scrolled .header-container {
+        min-height: 42px;
+        gap: 12px;
+    }
+
+    header.is-scrolled .header-logo {
+        gap: 8px;
+        padding: 3px 0;
+    }
+
+    header.is-scrolled .logo-square {
+        width: 30px;
+        height: 30px;
+    }
+
+    header.is-scrolled .multivariedades {
+        width: min(128px, 42vw);
+    }
+
+    header.is-scrolled .hamburger,
+    header.is-scrolled .close {
+        width: 32px;
+        height: 32px;
+        font-size: 1.1rem;
     }
 
     .mobile-menu {

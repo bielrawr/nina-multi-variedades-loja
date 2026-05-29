@@ -2,6 +2,7 @@ const hamburgerButton = document.querySelector("#hamburgerButton");
 const closeButton = document.querySelector("#closeButton");
 const mobileMenu = document.querySelector("#mobileMenu");
 const mobileLinks = document.querySelectorAll(".nav-links-mobile a");
+const header = document.querySelector("header");
 
 function setMenuOpen(isOpen) {
     if (!mobileMenu || !hamburgerButton) return;
@@ -30,3 +31,12 @@ document.addEventListener("keydown", (event) => {
         setMenuOpen(false);
     }
 });
+
+function updateHeaderSize() {
+    if (!header) return;
+
+    header.classList.toggle("is-scrolled", window.scrollY > 24);
+}
+
+updateHeaderSize();
+window.addEventListener("scroll", updateHeaderSize, { passive: true });
