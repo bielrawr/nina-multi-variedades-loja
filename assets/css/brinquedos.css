@@ -1,7 +1,7 @@
-@import url("./category.css");
+@import url("./category.css?v=2");
 
 :root {
-    --category-accent: #e90284;
+    --category-accent: #16a8e0;
     --category-image: url("/assets/img/kids-playing.jpg");
     --category-position: center;
 }

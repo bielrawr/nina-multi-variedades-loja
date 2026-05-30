@@ -1,7 +1,16 @@
-@import url("./style.css");
+@import url("./style.css?v=2");
+
+.category-page main,
+.category-page .main-section1 {
+    display: flex;
+    width: 100%;
+    flex: 1 0 auto;
+}
 
 .category-page .intro {
     display: grid;
+    width: 100%;
+    flex: 1 0 auto;
     min-height: calc(100vh - 76px);
     padding: clamp(44px, 8vw, 96px) 16px;
     place-items: center;
@@ -56,9 +65,9 @@
 
 @media (max-width: 640px) {
     .category-page .intro {
-        min-height: auto;
+        min-height: 100%;
         padding: 32px 12px;
-        align-items: start;
+        place-items: center;
     }
 
     .post {

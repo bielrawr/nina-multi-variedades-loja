@@ -14,16 +14,33 @@
 
 html {
     font-size: 16px;
+    min-height: 100%;
     scroll-behavior: smooth;
 }
 
 body {
+    display: flex;
+    min-height: 100vh;
     min-width: 320px;
     overflow-x: hidden;
     background: var(--surface-soft);
     color: var(--text);
     font-family: "Open Sans", Arial, sans-serif;
+    flex-direction: column;
     line-height: 1.6;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+body.menu-open::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 45;
+    background: rgba(5, 29, 28, 0.34);
+    backdrop-filter: blur(2px);
 }
 
 img {
@@ -49,9 +66,9 @@ header {
     align-items: center;
     justify-content: space-between;
     width: min(1120px, calc(100% - 32px));
-    min-height: 86px;
+    min-height: 69px;
     margin: 0 auto;
-    gap: 36px;
+    gap: 29px;
     transition: min-height 0.25s ease, gap 0.25s ease;
 }
 
@@ -59,21 +76,21 @@ header {
     display: flex;
     align-items: center;
     min-width: 0;
-    gap: 22px;
-    padding: 10px 0;
+    gap: 18px;
+    padding: 8px 0;
     transition: gap 0.25s ease, padding 0.25s ease;
 }
 
 .logo-square {
-    width: 56px;
-    height: 56px;
+    width: 45px;
+    height: 45px;
     object-fit: contain;
     flex: 0 0 auto;
     transition: width 0.25s ease, height 0.25s ease;
 }
 
 .multivariedades {
-    width: min(260px, 48vw);
+    width: min(208px, 48vw);
     height: auto;
     object-fit: contain;
     transition: width 0.25s ease;
@@ -84,22 +101,22 @@ header.is-scrolled {
 }
 
 header.is-scrolled .header-container {
-    min-height: 60px;
-    gap: 22px;
+    min-height: 48px;
+    gap: 18px;
 }
 
 header.is-scrolled .header-logo {
-    gap: 14px;
-    padding: 4px 0;
+    gap: 11px;
+    padding: 3px 0;
 }
 
 header.is-scrolled .logo-square {
-    width: 39px;
-    height: 39px;
+    width: 31px;
+    height: 31px;
 }
 
 header.is-scrolled .multivariedades {
-    width: min(182px, 40vw);
+    width: min(146px, 40vw);
 }
 
 .nav-bar,
@@ -312,7 +329,12 @@ header.is-scrolled .multivariedades {
     border: 0;
 }
 
+main {
+    flex: 1 0 auto;
+}
+
 footer {
+    flex-shrink: 0;
     width: 100%;
     background: var(--brand);
     color: rgba(255, 255, 255, 0.86);
@@ -404,22 +426,22 @@ footer {
 
 @media (max-width: 900px) {
     .header-container {
-        min-height: 58px;
-        gap: 16px;
+        min-height: 46px;
+        gap: 13px;
     }
 
     .header-logo {
-        gap: 10px;
-        padding: 4px 0;
+        gap: 8px;
+        padding: 3px 0;
     }
 
     .logo-square {
-        width: 38px;
-        height: 38px;
+        width: 30px;
+        height: 30px;
     }
 
     .multivariedades {
-        width: min(165px, 48vw);
+        width: min(132px, 48vw);
     }
 
     .nav-links-desktop {
@@ -433,47 +455,49 @@ footer {
         justify-content: center;
         width: 36px;
         height: 36px;
-        font-size: 1.25rem;
+        font-size: 1.15rem;
     }
 
     header.is-scrolled .header-container {
-        min-height: 42px;
-        gap: 12px;
+        min-height: 34px;
+        gap: 10px;
     }
 
     header.is-scrolled .header-logo {
-        gap: 8px;
-        padding: 3px 0;
+        gap: 6px;
+        padding: 2px 0;
     }
 
     header.is-scrolled .logo-square {
-        width: 30px;
-        height: 30px;
+        width: 24px;
+        height: 24px;
     }
 
     header.is-scrolled .multivariedades {
-        width: min(128px, 42vw);
+        width: min(102px, 42vw);
     }
 
     header.is-scrolled .hamburger,
     header.is-scrolled .close {
-        width: 32px;
-        height: 32px;
-        font-size: 1.1rem;
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
     }
 
     .mobile-menu {
         position: fixed;
         inset: 0 0 0 auto;
         display: flex;
-        width: min(320px, 82vw);
-        padding: 18px 24px 32px;
+        z-index: 70;
+        width: clamp(220px, 50vw, 360px);
+        padding: 14px 16px 28px;
         background: #ffffff;
-        box-shadow: -18px 0 40px rgba(0, 0, 0, 0.18);
+        box-shadow: -16px 0 42px rgba(0, 0, 0, 0.26), 0 0 0 1px rgba(5, 67, 64, 0.1);
         transform: translateX(100%);
         transition: transform 0.25s ease;
         flex-direction: column;
         align-items: flex-end;
+        border-radius: 8px 0 0 8px;
     }
 
     .mobile-menu.flex {
@@ -482,20 +506,30 @@ footer {
 
     .nav-links-mobile {
         width: 100%;
-        padding-top: 32px;
+        padding-top: 24px;
         flex-direction: column;
         align-items: stretch;
-        gap: 0;
+        gap: 8px;
     }
 
     .nav-links-mobile li {
-        border-bottom: 1px solid rgba(5, 67, 64, 0.12);
+        border-bottom: 0;
     }
 
     .nav-links-mobile a {
         display: block;
-        padding: 18px 0;
-        font-size: 1rem;
+        padding: 14px 16px;
+        border-radius: var(--radius);
+        background: rgba(5, 67, 64, 0.04);
+        font-size: 0.95rem;
+        text-align: right;
+    }
+
+    .nav-links-mobile a:hover,
+    .nav-links-mobile a:focus-visible {
+        background: rgba(5, 67, 64, 0.1);
+        color: var(--brand);
+        opacity: 1;
     }
 
     .intro-content {
